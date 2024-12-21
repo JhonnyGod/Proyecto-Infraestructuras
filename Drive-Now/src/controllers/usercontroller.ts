@@ -126,26 +126,26 @@ export const checkMatching = async (req: Request<{}, {}, validateCode>, res: Res
     }
 }
 
-export const newPassword = async (req: Request<{}, {}, changePassword>, res: Response) => {
-    const { code, password, email } = req.body
-    try {
-        if (!password || !code || !email) {
-            return res.status(400).json({ ok: false, message: 'User info has missing fields' });
+    export const newPassword = async (req: Request<{}, {}, changePassword>, res: Response) => {
+        const { code, password, email } = req.body
+        try {
+            if (!password || !code || !email) {
+                return res.status(400).json({ ok: false, message: 'User info has missing fields' });
+            }
+
+            const newPassword = await userService.newPassword(req.body);
+
+            if (newPassword) {
+                return res.status(200).json({ ok: true, message: 'new password applied, now log in' });
+
+            } else {
+                return res.status(400).json({ ok: false, message: 'new password failed' });
+            }
+
+        } catch (error) {
+            return res.status(422).json({ ok: false, message: 'error while processing data' });
         }
-
-        const newPassword = await userService.newPassword(req.body);
-
-        if (newPassword) {
-            return res.status(200).json({ ok: true, message: 'new password applied, now log in' });
-
-        } else {
-            return res.status(400).json({ ok: false, message: 'new password failed' });
-        }
-
-    } catch (error) {
-        return res.status(422).json({ ok: false, message: 'error while processing data' });
     }
-}
 
 export const createAdminUser = async (req: Request<{}, {}, AdminInfo>, res: Response) => {
     const { documento } = req.body;
