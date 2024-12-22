@@ -126,7 +126,7 @@ export const checkMatching = async (req: Request<{}, {}, validateCode>, res: Res
     }
 }
 
-    export const newPassword = async (req: Request<{}, {}, changePassword>, res: Response) => {
+export const newPassword = async (req: Request<{}, {}, changePassword>, res: Response) => {
         const { code, password, email } = req.body
         try {
             if (!password || !code || !email) {
@@ -145,7 +145,7 @@ export const checkMatching = async (req: Request<{}, {}, validateCode>, res: Res
         } catch (error) {
             return res.status(422).json({ ok: false, message: 'error while processing data' });
         }
-    }
+}
 
 export const createAdminUser = async (req: Request<{}, {}, AdminInfo>, res: Response) => {
     const { documento } = req.body;

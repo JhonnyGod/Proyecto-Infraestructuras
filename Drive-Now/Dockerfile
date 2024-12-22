@@ -1,20 +1,20 @@
-# Usar una imagen base oficial de Node.js
+# Usar una imagen base de Node.js
 FROM node:18
 
-# Crear un directorio de trabajo
+# Establecer el directorio de trabajo dentro del contenedor
 WORKDIR /usr/src/app
 
-# Copiar los archivos de configuración
+# Copiar el archivo package.json y package-lock.json (si existe)
 COPY package*.json ./
 
-# Instalar las dependencias
+# Instalar las dependencias del proyecto
 RUN npm install
 
-# Copiar el resto del código fuente
+# Copiar todo el código fuente del proyecto al contenedor
 COPY . .
 
-# Exponer el puerto 3000
+# Exponer el puerto en el que la app va a escuchar
 EXPOSE 3000
 
-# Comando para iniciar el servidor
-CMD ["npm", "run", "dev"]
+# Comando por defecto para ejecutar el contenedor
+CMD ["npx", "ts-node", "src/main/index.ts"]
