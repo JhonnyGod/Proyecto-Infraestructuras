@@ -1,0 +1,321 @@
+/* Fondo del modal (overlay) */
+.profile-modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw; /* Asegura que cubra toda la pantalla */
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    display: flex;
+    justify-content: flex-end; /* Coloca el modal en el lado derecho */
+    align-items: flex-start; /* Alinea el contenido desde arriba */
+    padding: 20px;
+    z-index: 1000;
+  }
+  
+  /* Estilo del modal (perfil) */
+  .profile-modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;  /* Apila los elementos verticalmente */
+    width: 300px;            /* Ancho del modal */
+    max-height: 90vh;        /* Máxima altura para no ocupar toda la pantalla */
+    height: auto;
+    overflow-y: hidden;      /* Desactiva el scroll en el modal */
+  }
+  
+  /* Estilo para la tarjeta de usuario en la parte superior */
+  .user-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 20px; /* Espaciado entre la tarjeta y las opciones */
+    border-bottom: 1px solid #eee;
+  }
+  
+  .user-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .user-info {
+    flex-grow: 1;
+    padding-right: 30px;
+  }
+  
+  .username {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    white-space: nowrap; /* Evita que el texto se rompa en múltiples líneas */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es largo */
+  }
+  .edit-profile-btn {
+    display: flex;              /* Usamos flexbox para alinear el ícono y el texto */
+    align-items: center;        /* Alineamos el contenido de forma vertical */
+    padding: 10px;
+    background-color: #4CAF50;  /* Color de fondo */
+    color: white;               /* Color del texto */
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .edit-profile-btn svg {
+    margin-right: 10px;         /* Espacio entre el ícono y el texto */
+    fill: #ffffff;              /* Color del ícono (en blanco, igual que el texto) */
+    width: 20px;                /* Tamaño del ícono */
+    height: 20px;               /* Tamaño del ícono */
+  }
+  
+  .edit-profile-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilo de las opciones del perfil */
+  .profile-options {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .profile-option {
+    width: 100%;
+    margin-bottom: 15px;  /* Espaciado entre las opciones */
+  }
+  
+  .profile-option button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .profile-option button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Estilo para los botones */
+  .close-button {
+    background-color: #025370;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-top: 15px; /* Espacio entre los botones */
+  }
+  
+  .close-button:hover {
+    background-color: #0084b4;
+  }
+  
+  .close-button:last-child {
+    background-color: #022F40; /* Cambia el color del botón de "Cerrar sesión" */
+  }
+  
+  .close-button:last-child:hover {
+    background-color: #024f6b; /* Color más oscuro al pasar el mouse */
+  }
+  .history-btn {
+    display: flex;              /* Usamos flexbox para alinear el ícono y el texto */
+    align-items: center;        /* Alineamos el contenido de forma vertical */
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .history-btn svg {
+    margin-right: 10px;         /* Espacio entre el ícono y el texto */
+    fill: #000000;         
+    width: 30px;      /* Color del ícono, puedes personalizarlo */
+  }
+
+  .about-you-btn {
+    display: flex;              /* Usamos flexbox para alinear el ícono y el texto */
+    align-items: center;        /* Alineamos el contenido de forma vertical */
+    padding: 10px;
+    background-color: #f4f4f4;  /* Color de fondo */
+    color: #333;                /* Color del texto */
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .about-you-btn svg {
+    margin-right: 10px;         /* Espacio entre el ícono y el texto */
+    width: 30px;                /* Tamaño del ícono */
+  }
+
+  .vehicle-options {
+    display: flex;              /* Usamos flexbox para alinear el ícono y el texto */
+    align-items: center;        /* Alineamos el contenido de forma vertical */
+    padding: 10px;
+    background-color: #f4f4f4;  /* Color de fondo */
+    color: #333;                /* Color del texto */
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;       /* Tamaño del ícono */
+
+  }
+
+  .settings-access{
+    display: flex;              /* Usamos flexbox para alinear el ícono y el texto */
+    align-items: center;        /* Alineamos el contenido de forma vertical */
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .settings-access svg{
+    margin-right: 10px;         /* Espacio entre el ícono y el texto */       
+    width: 30px;      /* Color del ícono, puedes personalizarlo */
+  }
+
+
+  .services-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about-me {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .avatar-container {
+    margin-bottom: 15px;
+  }
+  
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+  }
+  
+  .profile-info {
+    margin-top: 10px;
+  }
+  
+  .profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  
+  .profile-details {
+    margin: 20px 0;
+    text-align: left;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    background: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-details strong {
+    color: #007bff;
+  }
+  
+  .profile-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-edit {
+    background: #007bff;
+    color: #fff;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  
+  .avatar-container {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .profile-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer; /* Hace que el cursor indique interactividad */
+    transition: 0.3s ease;
+  }
+  
+  .profile-avatar:hover {
+    opacity: 0.8; /* Efecto visual al pasar el cursor */
+  }
+  
+  .file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Oculta completamente el input */
+    cursor: pointer; /* Permite que el cursor indique que se puede hacer clic */
+  }
+  

@@ -1,0 +1,72 @@
+.main-title {
+    position: auto;
+    margin-top: 20px;
+}
+
+.options-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 50px;
+
+}
+
+.add-container {
+    cursor: pointer;
+    border-radius: 20px;
+    margin-left: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.edit-container {
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+}
+
+.delete-container {
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.add-icon {
+    width: 150px;
+}
+
+
+.devolution-icon{
+    width: 150px;
+}
+
+.delete-container {
+    width: 150px;
+}
+
+.add-container:hover {
+    transform: scale(1.1);
+}
+
+.devolution-container:hover {
+    transform: scale(1.1);
+}
+
+.edit-container:hover {
+    transform: scale(1.1);
+}
+
+.delete-container:hover {
+    transform: scale(1.1);
+}
+
+.devolution-container {
+    cursor: pointer;
+    border-radius: 20px;
+    margin-left: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}

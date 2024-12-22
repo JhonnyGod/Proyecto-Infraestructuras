@@ -1,0 +1,145 @@
+.history-main-container {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .history-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .history-title {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .rental-history {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .rental-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .rental-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .rental-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .rental-details {
+    padding: 20px;
+  }
+  
+  .rental-details h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .rental-details p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .error-message {
+    color: #d32f2f;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 20px;
+    background-color: #ffcdd2;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .loading-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  .rental-status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+  
+  .rental-status-active {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+  }
+  
+  .rental-status-finished {
+    background-color: #ffcdd2;
+    color: #c62828;
+  }
+  
+  @media (max-width: 768px) {
+    .history-title {
+      font-size: 2rem;
+    }
+  
+    .rental-card {
+      max-width: 100%;
+    }
+  }
+  
+  .return-vehicle-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .return-vehicle-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .return-vehicle-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .return-vehicle-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5);
+  }
+  
+  @media (max-width: 768px) {
+    .return-vehicle-button {
+      font-size: 0.8rem;
+      padding: 8px 12px;
+    }
+  }

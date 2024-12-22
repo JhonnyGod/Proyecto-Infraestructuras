@@ -1,0 +1,55 @@
+.coincidences-container {
+    display: grid; /* Cambiamos de flex a grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Distribuye las tarjetas automáticamente */
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra la cuadrícula horizontalmente */
+    padding: 10px; /* Espaciado interno opcional */
+}
+
+.vehicle-item {
+    margin: 0; /* Eliminamos margen innecesario del contenedor individual */
+}
+
+.vehicle-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 100%; /* Permitimos que la tarjeta ocupe el espacio asignado por el grid */
+    box-sizing: border-box; /* Incluye padding y border en las dimensiones totales */
+}
+
+.search-title {
+    text-align: center;
+    color: #022F40;
+    font-size: 2.5rem;
+    margin: 27px auto;
+    font-family: 'Lucida Bright', sans-serif;
+}
+
+.paginationserch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 50px auto;
+}
+
+.paginationserch button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background: #022F40;
+    color: #eee;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.paginationserch button:disabled {
+    background-color: #eee;
+    color: rgb(105, 105, 105);
+    cursor: not-allowed;
+}
+
+.paginationserch span {
+    font-size: 14px;
+}

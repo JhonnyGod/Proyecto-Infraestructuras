@@ -5,7 +5,7 @@ services:
     image: postgres:15
     container_name: postgres_db
     ports:
-      - "5433:5432" # Externo 5433, interno 5432
+      - "5433:5432" 
     environment:
       POSTGRES_USER: "postgres"
       POSTGRES_PASSWORD: "12345"
@@ -17,17 +17,31 @@ services:
 
   backend:
     build:
-      context: .
+      context: ./Drive-Now
       dockerfile: Dockerfile
     container_name: drive-now_backend
     ports:
       - "3000:3000"
     volumes:
-      - .:/usr/src/app
+      - ./Drive-Now:/usr/src/app
     env_file:
-      - .env
+      - ./Drive-Now/.env
     networks:
       - backend_network
+    depends_on:
+      - database
+
+  frontend:
+    build:
+      context: ./DriveNowFrontend
+      dockerfile: Dockerfile
+    container_name: drive-now_frontend
+    ports:
+      - "8080:80"
+    networks:
+      - backend_network
+    depends_on:
+      - backend
 
 volumes:
   postgres_data:

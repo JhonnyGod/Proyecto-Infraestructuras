@@ -1,0 +1,306 @@
+/* Estilo general del header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #022F40;
+    color: #fff;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 100px;
+    cursor: pointer;
+}
+
+.input-header {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+
+
+.ventana-opciones {
+    width: 100%;
+    max-width: 145px;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    box-sizing: border-box;
+    margin-top: -5px;
+}
+
+.ventana-opciones h5 {
+    margin-bottom: 5px;
+    margin-top: -20px;
+    text-align: center;
+}
+
+
+
+
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.nav ul li {
+    margin-right: 20px;
+
+
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+
+.buttonsUser {
+
+    align-items: center;
+    margin-top: 10px;
+}
+
+.buttonsUser button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    height: 100px;
+
+
+}
+
+
+.profile-text {
+    position: relative;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    top: 40px;
+    left: -30px;
+    height: 50px;
+    white-space: nowrap;
+    margin-top: 15px;
+    font-family: 'Lucida Bright', sans-serif;
+}
+
+
+
+
+
+
+.buttonLogin {
+    background: #0e7094;
+    color: #fff;
+    font-family: 'Lucida Bright', sans-serif;
+    border: 5px solid #feffff;
+
+}
+
+.buttonLogin:hover {
+    background: #118bb8;
+    color: fff;
+}
+
+
+.buttonSing {
+    margin-left: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttonSing:hover {
+    background-color: #0056b3;
+}
+
+
+
+.profile-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3f060600;
+    margin-right: 30px;
+    margin-left: -35px;
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+
+
+
+.profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffffff00;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+
+
+.profileimg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+
+.main-screen .header .input-header {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    width: 300px;
+}
+
+.main-screen .header .input-header:focus {
+    border-color: #000000;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+
+
+
+
+
+/* Media queries para diseño responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .logo img {
+        height: 65px;
+        position: relative;
+        top: 17px;
+        left: 20px;
+      
+    }
+
+    .input-header {
+        flex: 1 0 100%;
+        max-width: none;
+        margin: 10px 0;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav ul li {
+        margin: 10px 10px;
+    }
+
+    .buttonsUser {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .buttonSing {
+        flex: 1 0 auto;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .header {
+ 
+        height: 300px;
+    }
+
+
+    .ventana-opciones {
+        width: 100%;
+        max-width: 145px;
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 100%;
+        z-index: 1;
+        box-sizing: border-box;
+        margin-top: -620px;
+    }
+
+
+    .buttonsUser {
+
+        align-items: center;
+        margin-top: -360px;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .input-header {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .nav ul li a {
+        font-size: 14px;
+    }
+
+    .profileimg {
+        height: 30px;
+        width: 30px;
+    }
+
+    .profile-text {
+        font-size: 12px;
+    }
+
+    .buttonsUser button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 5px;
+        height: 100px;
+
+
+    }
+
+    
+
+}

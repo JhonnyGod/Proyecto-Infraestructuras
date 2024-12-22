@@ -1,0 +1,405 @@
+.Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: url("../../Assets/fondo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Lucida Bright', sans-serif;
+    position: relative;
+}
+.Return_login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    align-items: left;
+    font-weight: bold;
+    font-size: 15px;
+    color: #022F40;
+    text-decoration: none;
+  }
+  .Return_login:hover {
+    border-radius: 10px;
+    color: #248BA8;
+  }
+
+.Recover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    transition: transform 0.5s ease; 
+    position: relative;
+    z-index: 1; 
+}
+
+.Recover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.Recover h1 {
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Lucida Bright', sans-serif;
+}
+
+.Recover form {
+    width: 100%;
+}
+
+.Recover input[type="email"] {
+    margin-bottom: 1rem;
+    margin-right: 1.5rem;
+    position: relative;
+    top: 40%;
+    width: 100%;
+    padding: 13px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+    box-sizing: border-box;
+    height: 48px;
+    font-family: 'Lucida Bright', sans-serif;
+    padding-left: 2.4rem;
+
+}
+
+.Recover input[type="email"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    height: 60px;
+    font-family: 'Lucida Bright', sans-serif;
+    padding-left: 2.4rem;
+
+}
+
+.Recover button {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background:  #194F67;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lucida Bright', sans-serif;
+    position: relative;
+}
+
+.sendbutton:hover {
+    background: #1C9FC7;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.Recover button:active {
+    transform: translateY(0);
+}
+
+.recover_icon{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    left: 15px;
+    color: #6c757d;
+  }
+.line{
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    .Recover {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .Recover h1 {
+        font-size: 24px;
+    }
+
+    .Recover input[type="email"],
+    .Recover button {
+        font-size: 14px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.modal-content {
+    position: relative;
+    background-color: #beeee6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100;
+    margin-top: 15px;
+}
+
+.Recover .closebutton:hover {
+    background: red;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.Recover.move-left {
+    transform: translateX(-65%); 
+}
+
+.Container .recovery-code-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 100px;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    position: absolute; 
+    top: 50%;
+    right: -100%; 
+    transform: translateY(-50%); 
+    z-index: 2; 
+    opacity: 0; 
+    animation: slideIn 0.5s ease forwards; 
+    height: 205px;
+}
+
+.Container .recovery-code-input.active {
+    right: 20%; 
+    animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        right: -100%; 
+        opacity: 0; 
+    }
+    to {
+        right: 14%; 
+        opacity: 1; 
+    }
+
+}
+
+.recovery-code-input .code-input-group input {
+    width: 40px;
+    height: 40px; 
+    margin: 5px; 
+    border-radius: 8px; 
+    border: 2px solid #e0e0e0; 
+    font-size: 18px;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.3s ease; 
+}
+
+.recovery-code-input .code-input-group input:focus {
+    border-color: black; 
+}
+
+.recovery-code-input .verify-button {
+    width: 40%;
+    height: 40px; 
+    border: none;
+    border-radius: 8px; 
+    background: #194F67; 
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600; 
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lucida Bright', sans-serif; 
+    margin-top: 8%;
+}
+
+.recovery-code-input .verify-button:hover {
+    background: #1C9FC7;
+    transform: translateY(-2px); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+}
+
+.recovery-code-input .verify-button:active {
+    transform: translateY(0); 
+}
+
+.Recover.exit-left {
+    display: none;
+   
+}
+
+.recovery-code-input.exit-right {
+    display: none;
+}
+
+.password-setter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 0.5s ease-out; 
+}
+
+.password-setter h1 {
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Lucida Bright', sans-serif;
+}
+
+.password-line {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.password-line input[type="password"],
+.password-line input[type="text"] {
+    width: 100%; 
+    padding: 13px;
+    padding-left: 2.4rem; 
+    padding-right: 3rem; 
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease; 
+    background-color: #f8f9fa;
+    box-sizing: border-box;
+    font-family: 'Lucida Bright', sans-serif;
+    height: 52px;
+}
+
+.password-line input[type="password"]:focus,
+.password-line input[type="text"]:focus {
+    width: 105%;
+    padding-left: 2.6rem; 
+    padding-right: 3.2rem; 
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    outline: none;
+}
+
+.password-line i,
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+.finalrecover_icon {
+    left: 10px; 
+}
+
+.toggle-password {
+    right: 10px; 
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    color: #000; 
+}
+.password-setter .sendbutton {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background: #194F67; 
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lucida Bright', sans-serif;
+    margin-top: 15px; 
+}
+
+.password-setter .sendbutton:hover {
+    background: #1C9FC7; 
+    transform: translateY(-2px); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+}
+
+.password-setter .sendbutton:active {
+    transform: translateY(0);
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6c757d;
+}
+
+.toggle-password:hover {
+    color: #000; 
+}

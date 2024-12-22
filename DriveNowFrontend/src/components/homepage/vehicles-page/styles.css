@@ -1,0 +1,209 @@
+body {
+  font-family: 'Lucida Bright', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #e6f3ff, #ffffff);
+  color: #333;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.vehicle-section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.section-title svg {
+  margin-right: 10px;
+}
+
+.vehicles-wrapper {
+  position: relative;
+}
+
+.vehicles-container {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.vehicle-card {
+  flex: 0 0 calc(50% - 10px);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-5px);
+}
+
+.vehicle-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.vehicle-info {
+  padding: 15px;
+}
+
+.vehicle-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.vehicle-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.feature svg {
+  font-size: 1.1rem;
+}
+
+.color-bubble {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.details-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+  background-color: #0056b3;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.scroll-button.left {
+  left: 0;
+}
+
+.scroll-button.right {
+  right: 0;
+}
+
+@media (min-width: 768px) {
+  .vehicle-card {
+    flex: 0 0 calc(33.333% - 13.333px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .vehicle-card {
+    flex: 0 0 calc(25% - 15px);
+  }
+}
+
+.vehicle-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.feature svg {
+  font-size: 1.1rem;
+}
+
+.price-label {
+  font-weight: bold;
+  color: #444;
+}
+
+.price-value {
+  color: #007bff;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.vehicle-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 1rem; /* Ajusta el tamaño general */
+  color: #333;
+  font-weight: bold;
+}
+
+.vehicle-price-label {
+  font-size: 0.9rem; /* Reduce el tamaño de la etiqueta */
+  color: #666;
+  font-weight: normal;
+}
+
+.vehicle-price-value {
+  font-size: 1.2rem; /* Aumenta el tamaño del valor */
+  color: #007bff; /* Colorea el valor */
+  font-weight: bold;
+}
