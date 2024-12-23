@@ -5,7 +5,7 @@ FROM node:18
 WORKDIR /usr/src/app
 
 # Copiar el archivo package.json y package-lock.json (si existe)
-COPY Drive-Now/package*.json ./
+COPY package*.json ./
 
 # Instalar las dependencias del proyecto
 RUN npm install

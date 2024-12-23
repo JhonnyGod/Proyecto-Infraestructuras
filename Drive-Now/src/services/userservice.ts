@@ -6,8 +6,6 @@ import { AdminInfo, changePassword, forgotPassword, getHistoryData, updateUserIn
 import bcrypt from 'bcrypt';
 import jwt, { Secret } from "jsonwebtoken";
 import { Vehicle } from '../entities/Vehicles';
-import { ok } from 'assert';
-import { profile } from 'console';
 import { Rental } from '../entities/Rental';
 const nodemailer = require("nodemailer");
 
