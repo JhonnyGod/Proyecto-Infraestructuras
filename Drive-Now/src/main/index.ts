@@ -8,7 +8,7 @@ const cors = require('cors');
 import cookieParser from "cookie-parser";
 
 const corsOptions = {
-    origin: ['http://localhost:8080', 'http://localhost:3001' , 'http://192.168.1.100'], //*Esto es para que el CORS permita solo solicitudes de este origen, que es el frontend
+    origin: '*', //*Esto es para que el CORS permita solo solicitudes de este origen, que es el frontend
     credentials: true,  //*Habilité el uso de Cookies dentro de las solicitudes
 }
 
