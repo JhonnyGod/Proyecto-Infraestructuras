@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: manhattan07/backendimage2:latest
+        image: manhattan07/backendimage3:latest
         ports:
         - containerPort: 3000
         env:

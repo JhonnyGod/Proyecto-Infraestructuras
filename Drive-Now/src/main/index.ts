@@ -8,16 +8,9 @@ const cors = require('cors');
 import cookieParser from "cookie-parser";
 
 const corsOptions = {
-    origin: [
-      'http://localhost:8080', // Para desarrollo local
-      'http://localhost:3001', // Otra URL local
-      'http://frontend-service', // Nombre del servicio dentro del clúster
-      'http://frontend-service.default.svc.cluster.local', // FQDN del servicio dentro del clúster
-      'http://<EXTERNAL_IP>', // Dirección externa del LoadBalancer (reemplaza <EXTERNAL_IP> por la dirección que obtienes)
-      'http://*.*.*.*' // Opción para permitir cualquier IP externa del LoadBalancer (ajusta según tus necesidades)
-    ],
-    credentials: true, // Permitir cookies y encabezados de autenticación
-  };
+    origin: ['http://localhost:8080', 'http://localhost:3001' , 'http://192.168.1.100'], //*Esto es para que el CORS permita solo solicitudes de este origen, que es el frontend
+    credentials: true,  //*Habilité el uso de Cookies dentro de las solicitudes
+}
 
 const app = express();
 app.use(cors(corsOptions));
