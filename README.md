@@ -21,11 +21,11 @@ Construye las imágenes Docker utilizando el archivo docker-compose.yml:
   
    docker-compose build  
     
-## Inicia los servicios: 
+3. **Inicia los servicios:** 
   
    docker-compose up -d  
   
-3. **Nube**  
+4. **Nube**  
 enlace desplegado en la nube:  
   
 https://frontend-25620165595.us-central1.run.app
