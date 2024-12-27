@@ -18,6 +18,8 @@ Sigue los pasos a continuación para desplegar el proyecto utilizando Docker Com
 
 ## Construye los servicios  
 Construye las imágenes Docker utilizando el archivo docker-compose.yml:  
+   ```bash
+   docker-compose build
   
 ## Inicia los servicios: 
    ```bash
