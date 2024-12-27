@@ -16,11 +16,16 @@ Sigue los pasos a continuación para desplegar el proyecto utilizando Docker Com
    git clone <URL_DEL_REPOSITORIO>
    cd <NOMBRE_DEL_REPOSITORIO>
 
-## Construye los servicios  
+2. **Construye los servicios y los inicia** 
 Construye las imágenes Docker utilizando el archivo docker-compose.yml:  
-   ```bash
-   docker-compose build
   
+   docker-compose build  
+    
 ## Inicia los servicios: 
-   ```bash
-   docker-compose up -d
+  
+   docker-compose up -d  
+  
+3. **Nube**  
+enlace desplegado en la nube:  
+  
+https://frontend-25620165595.us-central1.run.app
